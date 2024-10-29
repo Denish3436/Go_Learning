@@ -104,13 +104,93 @@ pl(reflect.TypeOf('a'))
     pl(pi) 
 
 // Convert string to int (ASCII to Integer)
-    cV3 := " 5000005"
+    cV3 := "55022"
 	cV4, err := strconv.Atoi(cV3)
 	if err == nil {
 		pl(cV4)
 	} else {
 		log.Fatal(err)
 	}
+
+	
+// Convert int to string (Integer to ASCII)
+    cV5 := 511245
+    cV6 := strconv.Itoa(cV5)
+    pl(cV6)
+
+//Convert string to float
+	cV7 := "3.14159"
+	cV8, err := strconv.ParseFloat(cV7, 64);
+	pl(cV8)
+
+// Use Sprintf to convert from float to string
+    cV9 := fmt.Sprintf("%f", 3.14)
+	pl(cV9)
+
+// ----- IF CONDITIONALS -----
+// == != < <= > >= && || ! are the same as other languages
+
+    iAge := 11
+
+	if (iAge >=1) && (iAge <= 18){
+		pl("You can go to school")
+	}else if (iAge>=19) || (iAge <=60){
+		pl("You can work")
+	}else {
+		pl("enjoy retirement")
+	}
+
+// ----- SWITCH -----
+// break is automatic unless you add fallthrough
+// You can switch on data types
+// case can include multiple values
+    iAge = 18 
+
+	switch iAge {
+	case 16 : pl("You can drive")
+	case 18 : pl("You can vote")
+	case 21 : pl("You can drink")
+	default : pl("Enjoy your life")
+	}
+
+// ! turns bools into their opposite value
+pl("!true =", !true)
+
+// ----- STRINGS -----
+// Strings are immutable
+// Strings are a slice of bytes
+// Strings can be created with backticks ` or double quotes "
+// Strings can be added with +
+// Strings can be converted to []byte
+
+	s1 := "Hello World"
+	pl(s1)
+	s2 := `Hello
+	World`
+	pl(s2)
+
+// Strings are a slice of bytes
+	pl(s1[0])
+
+// Convert string to []byte
+	bArr := []byte(s1)
+	pl(bArr)
+
+// Convert back to string
+	pl(string(bArr))
+
+// Concatenate strings
+	s3 := s1 + " again"
+	pl(s3)
+
+// Convert int to string
+	s4 := strconv.Itoa(42)
+	pl(s4)
+
+sV1 := "A string"
+
+// Get string length
+pl(len(sV1))
 
 
 
