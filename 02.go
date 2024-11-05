@@ -33,3 +33,19 @@ func main() {
         }
     }
 }
+
+//Looping Through Collections
+//The range keyword lets you loop over collections like arrays, slices, and maps with ease.
+package main
+
+import "fmt"
+
+func main() {
+    friends := []string{"Alex", "Jordan", "Casey"}
+
+    for index, friend := range friends {
+        fmt.Printf("Hello, %s! You’re friend number %d 🎉\n", friend, index+1)
+    }
+}
+
+
