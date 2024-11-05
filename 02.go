@@ -47,5 +47,21 @@ func main() {
         fmt.Printf("Hello, %s! You’re friend number %d 🎉\n", friend, index+1)
     }
 }
+// Nested Loop 
+package main
+
+import "fmt"
+
+func main() {
+    size := 5
+    fmt.Println("Multiplication Table:")
+
+    for i := 1; i <= size; i++ {
+        for j := 1; j <= size; j++ {
+            fmt.Printf("%d\t", i*j)
+        }
+        fmt.Println() // Newline after each row
+    }
+}
 
 
